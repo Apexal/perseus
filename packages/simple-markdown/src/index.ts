@@ -18,9 +18,8 @@
  * Many of the regexes and original logic has been adapted from
  * the wonderful [marked.js](https://github.com/chjj/marked)
  */
-import * as React from "react";
-
 import type {Capture, MatchFunction, State} from "./troublesome-types";
+import type {ReactNode, ReactElement} from "react";
 
 // Type Definitions:
 
@@ -37,8 +36,7 @@ type UnTypedASTNode = {
 
 type ASTNode = SingleASTNode | Array<SingleASTNode>;
 
-type ReactElement = React.ReactElement<any>;
-type ReactElements = React.ReactNode;
+type ReactElements = ReactNode;
 
 type Parser = (
     source: string,
@@ -1900,7 +1898,7 @@ var markdownToHtml = function (source: string, state?: State | null): string {
 
 // TODO: This needs definition
 type Props = any;
-var ReactMarkdown = function (props): React.ReactElement {
+var ReactMarkdown = function (props): ReactElement {
     var divProps: Record<string, any> = {};
 
     for (var prop in props) {
